@@ -10,6 +10,10 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  flutter_inappwebview:
+    git:
+      url: https://github.com/flash21-dev/flutter_inappwebview.git
+      ref: fix-xcode17
   geocoding: ^2.0.4
 
 dev_dependencies:
