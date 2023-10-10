@@ -167,10 +167,10 @@ class _KpostalViewState extends State<KpostalView> {
     }
 
     return InAppWebView(
-      initialOptions: InAppWebViewGroupOptions(
-        crossPlatform: InAppWebViewOptions(javaScriptEnabled: true),
-        android: AndroidInAppWebViewOptions(useHybridComposition: true),
-      ),
+      initialSettings: InAppWebViewSettings(
+                  useHybridComposition: true,
+                  javaScriptEnabled: true,
+                ),
       onWebViewCreated: (controller) async {
         // 안드로이드는 롤리팝 버전 이상 빌드에서만 작동 유의
         // WEB_MESSAGE_LISTENER 지원 여부 확인
@@ -194,7 +194,7 @@ class _KpostalViewState extends State<KpostalView> {
 
         await controller.loadUrl(
           urlRequest: URLRequest(
-            url: Uri.parse(_initialUrl + _queryParams),
+            url: WebUri.uri(_initialUrl + _queryParams),
             headers: {},
           ),
         );
