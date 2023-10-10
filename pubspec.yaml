@@ -13,7 +13,7 @@ dependencies:
   flutter_inappwebview:
     git:
       url: https://github.com/flash21-dev/flutter_inappwebview.git
-      ref: fix-xcode17
+      ref: master
   geocoding: ^2.0.4
 
 dev_dependencies:
